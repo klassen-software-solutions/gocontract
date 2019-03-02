@@ -9,3 +9,8 @@
 
 package contract
 
+import "fmt"
+
+func HelloWorld() {
+	fmt.Printf("Hello world!\n")
+}
