@@ -14,3 +14,7 @@ import "fmt"
 func HelloWorld() {
 	fmt.Printf("Hello world!\n")
 }
+
+func Hi() {
+	fmt.Printf("hi")
+}
