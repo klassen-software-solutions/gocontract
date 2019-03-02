@@ -1,5 +1,5 @@
 //
-// myprog/main.go
+// another/t.go
 // gocontract
 //
 // Created by steve on 2019-03-01.
@@ -7,12 +7,10 @@
 // Permission is hereby granted for use under the MIT License (https://opensource.org/licenses/MIT).
 //
 
-package main
+package another
 
-import "../another"
-import "../contract"
+import "fmt"
 
-func main() {
-	contract.HelloWorld()
-	another.HelloWorld()
+func HelloWorld() {
+	fmt.Printf("Hello world from another\n")
 }

@@ -12,17 +12,5 @@ package contract
 import "fmt"
 
 func HelloWorld() {
-	fmt.Printf("Hello world!\n")
-}
-
-func Hi() {
-	fmt.Printf("hi")
-}
-
-func HelloWorld2() {
-	fmt.Printf("Hello world!\n")
-}
-
-func Hi2() {
-	fmt.Printf("hi")
+	fmt.Printf("Hello world from contract\n")
 }
