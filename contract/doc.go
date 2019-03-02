@@ -1,5 +1,5 @@
 //
-// gocontract/doc.go
+// contract/doc.go
 // gocontract
 //
 // Created by steve on 2019-03-01.
@@ -7,5 +7,5 @@
 // Permission is hereby granted for use under the MIT License (https://opensource.org/licenses/MIT).
 //
 
-package gocontract
-
+// Package contract provides support for runtime "Programming by Contract" checks.
+package contract

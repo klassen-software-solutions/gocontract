@@ -1,5 +1,5 @@
 //
-// gocontract/doc.go
+// myprog/main.go
 // gocontract
 //
 // Created by steve on 2019-03-01.
@@ -7,5 +7,10 @@
 // Permission is hereby granted for use under the MIT License (https://opensource.org/licenses/MIT).
 //
 
-package gocontract
+package main
 
+import "../contract"
+
+func main() {
+	contract.HelloWorld()
+}
