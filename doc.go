@@ -9,3 +9,13 @@
 
 // Package gocontract provides support for runtime "Programming by Contract" checks.
 package gocontract
+
+import "fmt"
+
+func HelloWorld1() {
+	fmt.Printf("Hello world!\n")
+}
+
+func Hi1() {
+	fmt.Printf("hi")
+}
