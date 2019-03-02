@@ -18,3 +18,11 @@ func HelloWorld() {
 func Hi() {
 	fmt.Printf("hi")
 }
+
+func HelloWorld2() {
+	fmt.Printf("Hello world!\n")
+}
+
+func Hi2() {
+	fmt.Printf("hi")
+}
