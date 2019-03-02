@@ -10,7 +10,9 @@
 package another
 
 import "fmt"
+import "../contract"
 
 func HelloWorld() {
+	contract.HelloWorld()
 	fmt.Printf("Hello world from another\n")
 }

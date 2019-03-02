@@ -10,9 +10,7 @@
 package main
 
 import "../another"
-import "../contract"
 
 func main() {
-	contract.HelloWorld()
 	another.HelloWorld()
 }
