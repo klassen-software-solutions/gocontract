@@ -7,4 +7,8 @@
 // Permission is hereby granted for use under the MIT License (https://opensource.org/licenses/MIT).
 //
 
+// Package gocontract provides support for runtime "Programming by Contract" checks.
 package gocontract
+
+//go:generate ./generate-version.sh
+//go:generate ./generate-license.sh
