@@ -1,5 +1,5 @@
 //
-// gocontract/conditions_test.go
+// contract/conditions_test.go
 // gocontract
 //
 // Created by steve on 2019-03-02.
@@ -7,7 +7,7 @@
 // Permission is hereby granted for use under the MIT License (https://opensource.org/licenses/MIT).
 //
 
-package gocontract
+package contract
 
 import "testing"
 

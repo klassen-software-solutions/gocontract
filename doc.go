@@ -7,8 +7,9 @@
 // Permission is hereby granted for use under the MIT License (https://opensource.org/licenses/MIT).
 //
 
-// Package gocontract provides support for runtime "Programming by Contract" checks.
+// Package gocontract is the top-level project for the GO contract utilities. The version and license
+// for the library are found in this package, but all other code is found in the sub-packages.
 package gocontract
 
-//go:generate ./generate-version.sh
-//go:generate ./generate-license.sh
+//go:generate BuildSystem/generate-version.sh
+//go:generate BuildSystem/generate-license.sh

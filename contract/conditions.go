@@ -1,5 +1,5 @@
 //
-// gocontract/conditions.go
+// contract/conditions.go
 // gocontract
 //
 // Created by steve on 2019-03-02.
@@ -7,9 +7,10 @@
 // Permission is hereby granted for use under the MIT License (https://opensource.org/licenses/MIT).
 //
 
-package gocontract
+package contract
 
 import (
+	"fmt"
 	"log"
 	"path/filepath"
 	"runtime"
@@ -66,8 +67,8 @@ func performConditionChecks(conditionType string, result bool, results []bool) {
 	}
 }
 
-func reportFailureAndExit(conditionType string, expressionNumber, expressionCount int) {
-	pc, _, _, ok := runtime.Caller(3)
+func generateFailureMessage(conditionType string, expressionNumber, expressionCount int) string {
+	pc, _, _, ok := runtime.Caller(4)
 	if !ok {
 		log.Fatal("runtime.Caller failed, exiting program")
 	}
@@ -75,7 +76,12 @@ func reportFailureAndExit(conditionType string, expressionNumber, expressionCoun
 	frames := runtime.CallersFrames([]uintptr{pc})
 	frame, _ := frames.Next()
 
-	log.Fatalf("%v failed: expression %v of %v\n   in the method %v in the file %v, line %v\n   Terminating!",
+	return fmt.Sprintf("%v failed: expression %v of %v\n   in the method %v in the file %v, line %v",
 		conditionType, expressionNumber, expressionCount,
 		filepath.Base(frame.Function), filepath.Base(frame.File), frame.Line)
+}
+
+func reportFailureAndExit(conditionType string, expressionNumber, expressionCount int) {
+	msg := generateFailureMessage(conditionType, expressionNumber, expressionCount)
+	log.Fatalf("%v\n   Terminating!", msg)
 }
