@@ -3,4 +3,4 @@
 package gocontract
 
 // Version contains the current version number of this library.
-const Version = "v0.0.0-16-g5b2ba5eM"
+const Version = "v1.0.0"
