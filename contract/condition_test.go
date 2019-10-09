@@ -14,7 +14,7 @@ import "testing"
 // Note that the following tests are little more than syntax checks as actually testing a
 // failure would cause the program to exit.
 
-func TestPreconditions(t *testing.T) {
+func TestPreconditions(_ *testing.T) {
 	Preconditions(true)
 
 	Preconditions(true, true)
@@ -25,7 +25,7 @@ func TestPreconditions(t *testing.T) {
 		func() bool { return myFn() }())
 }
 
-func TestConditions(t *testing.T) {
+func TestConditions(_ *testing.T) {
 	Conditions(true)
 
 	Conditions(true, true)
@@ -36,7 +36,7 @@ func TestConditions(t *testing.T) {
 		func() bool { return myFn() }())
 }
 
-func TestPostconditions(t *testing.T) {
+func TestPostconditions(_ *testing.T) {
 	Postconditions(true)
 
 	Postconditions(true, true)

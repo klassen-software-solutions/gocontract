@@ -14,18 +14,16 @@ import "testing"
 // Note that the following tests are little more than syntax checks as actually testing a failure
 // would cause the program to exit.
 
-func TestInvariantWithoutDefer(t *testing.T) {
+func TestInvariantWithoutDefer(_ *testing.T) {
 	o := MyObject{1, "one"}
 	inv := NewInvariant(&o)
 	inv.Check()
 }
 
-func TestInvariantWithDefer(t *testing.T) {
+func TestInvariantWithDefer(_ *testing.T) {
 	o := MyObject{1, "one"}
 	inv := NewInvariant(&o)
 	defer inv.Check()
-
-	o.IValue++
 }
 
 type MyObject struct {
